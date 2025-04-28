@@ -23,7 +23,22 @@ viewer.camera.flyTo({
 });
 
 try {
-  const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(96188); // OSM Buildings
+ // Array med dina 9 assets (Church1–Church9) och deras Ion-ID:n
+ const churchAssetIDs = [
+  3289001, // Church1
+  3289004, // Church2
+  3289006, // Church3
+  3289029, // Church4
+  3289031, // Church5
+  3289035, // Church6
+  3289037, // Church7
+  3289039, // Church8
+  3289041, // Church9
+];
+
+// Variabel som bestämmer hur många av kyrkorna du vill ladda
+// (Se till att inte överskrida arrayens längd)
+const howMany = 9; 
   viewer.scene.primitives.add(tileset);
   await viewer.zoomTo(tileset);
 
