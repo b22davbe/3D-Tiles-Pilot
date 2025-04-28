@@ -11,7 +11,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 viewer.scene.globe.depthTestAgainstTerrain = true;
 window.viewer = viewer; // Exponera viewer globalt om du vill
 
-// Fly to Skara Domkyrka
+// Flyga till en övergripande vy a kyrkan
 viewer.camera.flyTo({
   destination: Cesium.Cartesian3.fromDegrees(13.43450246, 58.38425682, 407.51),
   orientation: {
